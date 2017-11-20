@@ -1,5 +1,5 @@
 #!/bin/bash
-files=(HellowWorld.java ConsoleExercises.java ControlFlowExercises.java StringExercise.java)
+files=(HellowWorld.java ConsoleExercises.java ControlFlowExercises.java StringExercise.java bob.java)
   
 for file in "${files[@]}"
 do
