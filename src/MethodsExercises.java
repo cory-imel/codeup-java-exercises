@@ -34,9 +34,9 @@ class MethodsExercises {
         }
         return 0;
     }
-    private static int divide(int num1, int num2){
+    private static double divide(int num1, int num2){
         if (num1 != 0 && num2 != 0) {
-                return num1 / num2;
+                return (double) num1 / num2;
         }else{
             System.out.println("Does not compute!");
             return 0;
@@ -50,15 +50,12 @@ class MethodsExercises {
             return 0;
         }
     }
-    private static int getUserInput(){
+    private static int getUserInput(int min, int max){
         Scanner sc = new Scanner(System.in);
-        System.out.printf("Enter a number between 1 and 20: ");
-        return sc.nextInt();
-    }
-    private static int getInteger(){
-        int input = getUserInput();
-        if(!(input >= 1 && input <= 20)){
-           input = getInteger();
+        System.out.printf("Enter a number between %d and %d: ",min,max);
+        int input = sc.nextInt();
+        if(!(input >= min && input <= max)){
+           input = getUserInput(min, max);
         }
         return input;
     }
@@ -71,7 +68,7 @@ class MethodsExercises {
     }
     private static void diceRoll(Scanner sc) {
         String response;
-        int sides = getInteger();
+        int sides = getUserInput(1,100);
         System.out.println("The first roll is " + getRandom(sides));
         System.out.println("The second roll is " + getRandom(sides));
         System.out.println("Would you like to roll again (y/n)? ");
