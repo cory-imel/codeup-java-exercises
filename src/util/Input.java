@@ -15,11 +15,7 @@ public class Input {
 
     public boolean yesNo() {
         String input = this.scan.next();
-        if(input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes")) {
-            return true;
-        } else {
-            return false;
-        }
+        return (input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes"));
     }
 
     public int getInt(int min, int max) {
@@ -35,8 +31,15 @@ public class Input {
     }
 
     public int getInt() {
-        return this.scan.nextInt();
+        if (this.scan.hasNextInt()){
+            return this.scan.nextInt();
+        }else{
+            System.out.println("The input was invalid, please try again:");
+            this.scan.next();
+            return getInt();
+        }
     }
+
 
     public double getDouble(double min, double max) {
         System.out.println("Please input an decimal number between " + min + " and " + max);
@@ -51,6 +54,12 @@ public class Input {
     }
 
     public double getDouble() {
-        return this.scan.nextDouble();
+        if (this.scan.hasNextDouble()){
+            return this.scan.nextDouble();
+        }else{
+            System.out.println("The input was invalid, please try again:");
+            this.scan.next();
+            return getDouble();
+        }
     }
 }

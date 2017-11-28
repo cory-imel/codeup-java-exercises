@@ -26,8 +26,5 @@ public class InputTest {
         } else {
             System.out.println("You said anything other than yes.");
         }
-
-        String someString = input.getString();
-        System.out.println("You provided: " + someString);
     }
 }
