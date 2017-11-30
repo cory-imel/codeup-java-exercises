@@ -5,15 +5,14 @@ public class ShapesTest {
 
         Measurable myShape;
 
-        myShape  = new Rectangle(4,5);
+
+        myShape = new Rectangle(4,5);
         System.out.println(myShape.getArea());
         System.out.println(myShape.getPerimeter());
 
-        myShape = new Square(4);
+        myShape  = new Square(5);
         System.out.println(myShape.getArea());
         System.out.println(myShape.getPerimeter());
-
-
 
     }
 }
