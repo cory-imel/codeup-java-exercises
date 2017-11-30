@@ -16,11 +16,11 @@ class Rectangle extends Quadrilateral implements Measurable{
         return this.length * this.width;
     }
 
-    public void setWidth(int input) {
-        width = input;
+    public void setWidth(int side) {
+        width = side;
     }
 
-    public void setLength(int input) {
-        length = input;
+    public void setLength(int side) {
+        length = side;
     }
 }

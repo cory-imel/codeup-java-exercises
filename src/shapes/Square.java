@@ -1,8 +1,10 @@
 package shapes;
 
 class Square extends Quadrilateral implements Measurable{
-    public Square(int length, int width) {
-        super(length, width);
+    public Square(int side) {
+        width = side;
+        length = side;
+//        super(length, width);
     }
 
     @Override
@@ -15,13 +17,13 @@ class Square extends Quadrilateral implements Measurable{
         return length * width;
     }
 
-    public void setWidth(int input) {
-        width = input;
-        length = input;
+    public void setWidth(int side) {
+        width = side;
+        length = side;
     }
 
-    public void setLength(int input) {
-        length = input;
-        width = input;
+    public void setLength(int side) {
+        length = side;
+        width = side;
     }
 }
