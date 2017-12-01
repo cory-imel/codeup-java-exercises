@@ -16,6 +16,10 @@ public class Student {
         return name;
     }
 
+    public ArrayList getGrades(){
+        return grades;
+    }
+
     // adds the given grade to the grades property
     public void addGrade(int grade){
         grades.add(grade);
@@ -32,15 +36,4 @@ public class Student {
         }
         return sum;
     }
-
-//    public static void main(String[] args) {
-//        Student student1 = new Student("Robby");
-//
-//        student1.addGrade(75);
-//        student1.addGrade(50);
-//        student1.addGrade(90);
-//        System.out.println(student1.getName());
-//        System.out.println(student1.getGradeAverage());
-//
-//    }
 }
