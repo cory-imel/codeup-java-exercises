@@ -1,7 +1,6 @@
 package grades;
 
 import java.util.HashMap;
-import java.util.Map;
 
 import util.Input;
 
@@ -50,14 +49,18 @@ public class GradesApplication {
             System.out.println("Would you like to see another student?");
 
         }else{
+
             System.out.printf("Sorry, no student found with the gihub username of %s.%n",userIn);
             displayPrompt();
         }
 
 
         if (input.yesNo()){
+
             displayPrompt();
+
         }else {
+
             System.out.println();
             System.out.println("Goodbye, and have a wonderful day!");
         }
