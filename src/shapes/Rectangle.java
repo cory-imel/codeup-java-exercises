@@ -13,14 +13,14 @@ class Rectangle extends Quadrilateral implements Measurable{
 
     @Override
     public double getArea() {
-        return this.length * this.width;
+        return length * width;
     }
 
     public void setWidth(int side) {
-        width = side;
+        this.width = side;
     }
 
     public void setLength(int side) {
-        length = side;
+        this.length = side;
     }
 }
