@@ -16,7 +16,7 @@ public class GradesApplication {
     }
 
 
-    public static void initializeStudents(){
+    private static void initializeStudents(){
 
         students.put("xoxide", new Student("Cory"));
         students.put("abbyperez28", new Student("Abby"));
@@ -34,33 +34,32 @@ public class GradesApplication {
         System.out.println();
     }
 
-    public static void displayPrompt(){
+    private static void displayPrompt(){
         Input input = new Input();
         String userIn;
 
+        System.out.println();
         System.out.println("What student would you like to see more information on?\n");
+
         userIn = input.getString().toLowerCase();
 
         if(students.containsKey(userIn)) {
-            for (Map.Entry<String, Student> e : students.entrySet()) {
-                if (e.getKey().equals(userIn)) {
-                    System.out.println();
-                    System.out.printf("Name: %s - Github Username: %s%n",e.getValue().getName(),e.getKey());
-                    System.out.printf("Current Average: %d%n%n",(int) e.getValue().getGradeAverage());
-                }
-            }
+
+            System.out.printf("Name: %s - Github Username: %s%n",students.get(userIn).getName(),userIn);
+            System.out.printf("Current Average: %d%n%n",(int) students.get(userIn).getGradeAverage());
+            System.out.println("Would you like to see another student?");
+
         }else{
             System.out.printf("Sorry, no student found with the gihub username of %s.%n",userIn);
             displayPrompt();
         }
 
-        System.out.println("Would you like to see another student?\n");
 
         if (input.yesNo()){
-
             displayPrompt();
+        }else {
+            System.out.println();
+            System.out.println("Goodbye, and have a wonderful day!");
         }
-
-        System.out.println("Goodbye, and have a wonderful day!");
     }
 }
