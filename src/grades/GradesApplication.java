@@ -6,9 +6,10 @@ import util.Input;
 
 public class GradesApplication {
     private static HashMap<String, Student> students = new HashMap<>();
-    private static Input input = new Input();
+
 
     public static void main(String[] args) {
+        Input input = new Input();
 
         initializeStudents();
         System.out.println();
@@ -60,6 +61,7 @@ public class GradesApplication {
     }
 
     private static void displayPrompt() {
+        Input input = new Input();
         String userIn;
         ArrayList<Integer> grades;
 
@@ -93,8 +95,6 @@ public class GradesApplication {
             displayPrompt();
 
         } else {
-
-            System.out.println();
             System.out.println("Goodbye, and have a wonderful day!");
         }
     }
