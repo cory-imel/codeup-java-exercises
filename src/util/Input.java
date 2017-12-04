@@ -31,11 +31,11 @@ public class Input {
     }
 
     public int getInt() {
-        if (this.scan.hasNextInt()){
-            return this.scan.nextInt();
-        }else{
+        try {
+            String input = this.scan.next();
+            return Integer.valueOf(input);
+        } catch (NumberFormatException e) {
             System.out.println("The input was invalid, please try again:");
-            this.scan.next();
             return getInt();
         }
     }
@@ -54,12 +54,33 @@ public class Input {
     }
 
     public double getDouble() {
-        if (this.scan.hasNextDouble()){
-            return this.scan.nextDouble();
-        }else{
+        try {
+            String input = this.scan.next();
+            return Double.valueOf(input);
+        } catch (NumberFormatException e) {
             System.out.println("The input was invalid, please try again:");
-            this.scan.next();
             return getDouble();
         }
     }
+
+    public int getBinary() {
+        try {
+            String input = this.scan.next();
+            return Integer.valueOf(input, 2);
+        } catch (NumberFormatException e) {
+            System.out.println("The input was invalid, please try again:");
+            return getBinary();
+        }
+    }
+
+    public int getHex() {
+        try {
+            String input = this.scan.next();
+            return Integer.valueOf(input, 16);
+        } catch (NumberFormatException e) {
+            System.out.println("The input was invalid, please try again:");
+            return getHex();
+        }
+    }
+
 }
