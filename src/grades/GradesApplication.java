@@ -26,7 +26,7 @@ public class GradesApplication {
 
     private static void initializeStudents() {
 
-        students.put("xoxide", new Student("Cory"));
+        students.put("cory", new Student("Cory"));
         students.put("abbyperez28", new Student("Abby"));
         students.put("acano0824", new Student("Ash"));
         students.put("aggiefan17", new Student("Terry"));
